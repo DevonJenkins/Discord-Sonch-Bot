@@ -26,7 +26,21 @@ const TEST_COMMAND = {
 
 const SYNC_COMMAND = {
 	name: 'sync',
-	description: 'Basic cum',
+	description: 'Basic command',
+	type: 1,
+}
+
+const JOIN_COMMAND = {
+	name: 'join',
+	description: 'Basic command',
+	options: [
+		{
+			type: 3, 
+			name: 'test',
+			description: 'test',
+			required: false,
+		}
+	],
 	type: 1,
 }
 
@@ -46,6 +60,6 @@ const CHALLENGE_COMMAND = {
   type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, SYNC_COMMAND, CHALLENGE_COMMAND];
+const ALL_COMMANDS = [TEST_COMMAND, SYNC_COMMAND, CHALLENGE_COMMAND, JOIN_COMMAND] 
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
